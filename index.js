@@ -16,4 +16,7 @@ app.get('/planets/:planetName', async (req, res) => {
 	planet ? res.send(planet) : res.send({message: "Planet not found"});
 })
 
-app.listen(5000, () => console.log("App is up!"));
+
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, () => console.log("App is up!"));
